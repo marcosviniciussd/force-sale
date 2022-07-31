@@ -188,6 +188,8 @@ fabric.properties
 # https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
 .idea/**/azureSettings.xml
 
+
+
 ### Java ###
 # Compiled class file
 *.class
@@ -197,6 +199,8 @@ fabric.properties
 
 # BlueJ files
 *.ctxt
+
+
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
