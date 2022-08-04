@@ -9,10 +9,15 @@ public class Programa {
         Cliente cli = new Cliente();
         cli.cadastraCliente();
 
+        Endereco end = new Endereco();
+        end.cadastraEndereco();
+        cli.adicionaEndereco(end);
+
+
         System.out.println("Mostrando o Cliente");
         System.out.println(cli.getNome());
         System.out.println(cli.getDataNascimento());
-
+        System.out.println(cli.getEnderecos());
 
 
         /*

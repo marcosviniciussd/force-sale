@@ -3,8 +3,6 @@ package br.com.force.sale.pessoa;
 import java.util.Scanner;
 
 public class Endereco {
-
-    public enum TipoEndereco {ENDERECO_RESIDENCIAL, ENDERECO_COMERCIAL, ENDERECO_ENTREGA, ENDERECO_COBRANCA}
     private String endereco;
     private String numero;
     private String complemento;
@@ -81,13 +79,6 @@ public class Endereco {
     Scanner sc = new Scanner(System.in);
     public void cadastraEndereco() {
         int tipoEnd = 0;
-        String endereco = "";
-        String numero = "";
-        String bairro = "";
-        String complemento = "";
-        String cidade = "";
-        String cep = "";
-        String estado = "";
 
         System.out.println("SELECIONE O TIPO DE ENDEREÇO: ");
         System.out.println("1 - RESIDENCIAL");
@@ -98,44 +89,52 @@ public class Endereco {
 
         tipoEnd = sc.nextInt();
         if (tipoEnd == 1){
-            setTipoEndereco(Endereco.TipoEndereco.ENDERECO_RESIDENCIAL);
+            setTipoEndereco(TipoEndereco.ENDERECO_RESIDENCIAL);
         } else if (tipoEnd == 2) {
-            setTipoEndereco(Endereco.TipoEndereco.ENDERECO_COMERCIAL);
+            setTipoEndereco(TipoEndereco.ENDERECO_COMERCIAL);
         } else if (tipoEnd == 3) {
-            setTipoEndereco(Endereco.TipoEndereco.ENDERECO_ENTREGA);
+            setTipoEndereco(TipoEndereco.ENDERECO_ENTREGA);
         } else if (tipoEnd == 4) {
-            setTipoEndereco(Endereco.TipoEndereco.ENDERECO_COBRANCA);
+            setTipoEndereco(TipoEndereco.ENDERECO_COBRANCA);
         }
         else{
             System.out.println("Opção Inválida.");
         }
 
         System.out.println("C.E.P");
-        cep = sc.nextLine();
-        setCep(cep);
+        this.cep = sc.nextLine();
 
         System.out.println("Endereço: ");
-        endereco = sc.nextLine();
-        setEndereco(endereco);
+        this.endereco = sc.nextLine();
 
         System.out.println("Numero: ");
-        numero = sc.nextLine();
-        setNumero(numero);
+        this.numero = sc.nextLine();
 
         System.out.println("Bairro: ");
-        bairro = sc.nextLine();
-        setBairro(bairro);
+        this.bairro = sc.nextLine();
 
         System.out.println("Complemento: ");
-        complemento = sc.nextLine();
-        setComplemento(complemento);
+        this.complemento = sc.nextLine();
 
         System.out.println("Cidade: ");
-        cidade = sc.nextLine();
-        setCidade(cidade);
+        this.cidade = sc.nextLine();
 
         System.out.println("Estado: ");
-        estado = sc.nextLine();
-        setEstado(estado);
+        this.estado = sc.nextLine();
+    }
+
+    @Override
+    public String toString() {
+        return "Endereco{" +
+                "endereco='" + endereco + '\'' +
+                ", numero='" + numero + '\'' +
+                ", complemento='" + complemento + '\'' +
+                ", bairro='" + bairro + '\'' +
+                ", cidade='" + cidade + '\'' +
+                ", estado='" + estado + '\'' +
+                ", cep='" + cep + '\'' +
+                ", tipoEndereco=" + tipoEndereco +
+                ", sc=" + sc +
+                '}';
     }
 }
