@@ -87,28 +87,29 @@ public class Cliente extends Pessoa {
         String tipoDocumento = "";
         String documento = "";
 
-        System.out.println("Nome: ");
-        nome = sc.nextLine();
-        setNome(nome);
+        System.out.print("Nome: ");
+        this.setNome(sc.nextLine());
+        //nome = sc.nextLine();
+        //setNome(nome);
 
-        System.out.println("C.P.F: ");
-        cgccpf = sc.nextLine();
-        setCgcCpf(cgccpf);
+        System.out.print("C.P.F: ");
+        this.setCgcCpf(sc.nextLine());
+        //cgccpf = sc.nextLine();
+        //setCgcCpf(cgccpf);
 
-        System.out.println("Tipo do Documento: ");
-        tipoDocumento = sc.nextLine();
-        setTipoDocumento(tipoDocumento);
+        System.out.print("Tipo do Documento: ");
+        this.setTipoDocumento(sc.nextLine());
+        //tipoDocumento = sc.nextLine();
+        //setTipoDocumento(tipoDocumento);
 
-        System.out.println("Nro. Documento: ");
-        documento = sc.nextLine();
-        setTipoDocumento(documento);
+        System.out.print("Nro. Documento: ");
+        this.setDocIdentificacao(sc.nextLine());
+        //documento = sc.nextLine();
+        //setTipoDocumento(documento);
 
-        System.out.println("Nascimento: ");
-        nascimento = sc.nextLine();
-        setDataNascimento(nascimento);
-
-        Endereco end = new Endereco();
-        end.cadastraEndereco();
-        adicionaEndereco(end);
+        System.out.print("Nascimento: ");
+        this.setDataNascimento(sc.nextLine());
+        //nascimento = sc.nextLine();
+        //setDataNascimento(nascimento);
     }
 }
