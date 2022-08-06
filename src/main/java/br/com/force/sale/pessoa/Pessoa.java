@@ -1,13 +1,13 @@
 package br.com.force.sale.pessoa;
 
 public class Pessoa {
-    public enum TipoPessoa{PESSOA_FISICA, PESSOA_JURIDICA}
+    //public enum TipoPessoa{PESSOA_FISICA, PESSOA_JURIDICA}
 
-    private static final int TAMANHO_CPF = 11;
-    private static final int TAMANHO_CNPJ = 14;
-    private String nome;
-    private String cgcCpf;
-    private TipoPessoa tipoPessoa;
+    protected static final int TAMANHO_CPF = 11;
+    protected static final int TAMANHO_CNPJ = 14;
+    protected String nome;
+    protected String cgcCpf;
+    protected TipoPessoaEnum tipoPessoa;
 
     public String getNome() {
         return nome;
@@ -26,10 +26,10 @@ public class Pessoa {
             throw new NullPointerException(getClass().toString() + " Erro-PES001: Documento não pode ser nulo ou vazio. ");
         }
         if (cgcCpf.length() == TAMANHO_CPF){
-            setCgcCpf(cgcCpf, tipoPessoa = TipoPessoa.PESSOA_FISICA);
+            setCgcCpf(cgcCpf, tipoPessoa = TipoPessoaEnum.PESSOA_FISICA);
             //tipoPessoa = TipoPessoa.PESSOA_FISICA;
         } else if (cgcCpf.length() == TAMANHO_CNPJ) {
-            setCgcCpf(cgcCpf, tipoPessoa = TipoPessoa.PESSOA_JURIDICA);
+            setCgcCpf(cgcCpf, tipoPessoa = TipoPessoaEnum.PESSOA_JURIDICA);
             //tipoPessoa = TipoPessoa.PESSOA_JURIDICA;
         }
         else{
@@ -37,16 +37,16 @@ public class Pessoa {
         }
     }
 
-    private void setCgcCpf(String cgcCpf, TipoPessoa tipoPessoa){
+    private void setCgcCpf(String cgcCpf, TipoPessoaEnum tipoPessoa){
         this.cgcCpf = cgcCpf;
         this.tipoPessoa = tipoPessoa;
     }
 
-    public TipoPessoa getTipoPessoa() {
+    public TipoPessoaEnum getTipoPessoa() {
         return tipoPessoa;
     }
 
-    public void setTipoPessoa(TipoPessoa tipoPessoa) {
+    public void setTipoPessoa(TipoPessoaEnum tipoPessoa) {
         this.tipoPessoa = tipoPessoa;
     }
 }

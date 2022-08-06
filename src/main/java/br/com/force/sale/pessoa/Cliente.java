@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class Cliente extends Pessoa {
 
+
     private int codCliente;
     private Boolean sitCliente;
     private String docIdentificacao;
@@ -81,35 +82,21 @@ public class Cliente extends Pessoa {
 
     Scanner sc = new Scanner(System.in);
     public void cadastraCliente() {
-        String nome = "";
-        String nascimento = "";
-        String cgccpf = "";
-        String tipoDocumento = "";
-        String documento = "";
 
-        System.out.print("Nome: ");
-        this.setNome(sc.nextLine());
-        //nome = sc.nextLine();
-        //setNome(nome);
+        System.out.println("Nome: ");
+        this.nome = sc.nextLine();
 
-        System.out.print("C.P.F: ");
-        this.setCgcCpf(sc.nextLine());
-        //cgccpf = sc.nextLine();
-        //setCgcCpf(cgccpf);
+        System.out.println("C.P.F: ");
+        this.cgcCpf = sc.nextLine();
 
-        System.out.print("Tipo do Documento: ");
-        this.setTipoDocumento(sc.nextLine());
-        //tipoDocumento = sc.nextLine();
-        //setTipoDocumento(tipoDocumento);
+        System.out.println("Tipo do Documento: ");
+        this.tipoDocumento = sc.nextLine();
 
-        System.out.print("Nro. Documento: ");
-        this.setDocIdentificacao(sc.nextLine());
-        //documento = sc.nextLine();
-        //setTipoDocumento(documento);
 
-        System.out.print("Nascimento: ");
-        this.setDataNascimento(sc.nextLine());
-        //nascimento = sc.nextLine();
-        //setDataNascimento(nascimento);
+        System.out.println("Nro. Documento: ");
+        this.docIdentificacao = sc.nextLine();
+
+        System.out.println("Nascimento: ");
+        this.dataNascimento = sc.nextLine();
     }
 }

@@ -10,7 +10,7 @@ public class Endereco {
     private String cidade;
     private String estado;
     private String cep;
-    private TipoEndereco tipoEndereco;
+    private TipoEnderecoEnum tipoEndereco;
 
     public String getEndereco() {
         return endereco;
@@ -68,11 +68,11 @@ public class Endereco {
         this.cep = cep;
     }
 
-    public TipoEndereco getTipoEndereco() {
+    public TipoEnderecoEnum getTipoEndereco() {
         return tipoEndereco;
     }
 
-    public void setTipoEndereco(TipoEndereco tipoEndereco) {
+    public void setTipoEndereco(TipoEnderecoEnum tipoEndereco) {
         this.tipoEndereco = tipoEndereco;
     }
 
@@ -89,13 +89,13 @@ public class Endereco {
 
         tipoEnd = sc.nextInt();
         if (tipoEnd == 1){
-            setTipoEndereco(TipoEndereco.ENDERECO_RESIDENCIAL);
+            setTipoEndereco(TipoEnderecoEnum.ENDERECO_RESIDENCIAL);
         } else if (tipoEnd == 2) {
-            setTipoEndereco(TipoEndereco.ENDERECO_COMERCIAL);
+            setTipoEndereco(TipoEnderecoEnum.ENDERECO_COMERCIAL);
         } else if (tipoEnd == 3) {
-            setTipoEndereco(TipoEndereco.ENDERECO_ENTREGA);
+            setTipoEndereco(TipoEnderecoEnum.ENDERECO_ENTREGA);
         } else if (tipoEnd == 4) {
-            setTipoEndereco(TipoEndereco.ENDERECO_COBRANCA);
+            setTipoEndereco(TipoEnderecoEnum.ENDERECO_COBRANCA);
         }
         else{
             System.out.println("Opção Inválida.");
@@ -133,7 +133,7 @@ public class Endereco {
                 ", cidade='" + cidade + '\'' +
                 ", estado='" + estado + '\'' +
                 ", cep='" + cep + '\'' +
-                ", tipoEndereco=" + tipoEndereco +
+                ", tipoEndereco=" + tipoEndereco.getValue().toString() +
                 ", sc=" + sc +
                 '}';
     }
