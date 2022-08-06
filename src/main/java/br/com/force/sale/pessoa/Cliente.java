@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Cliente extends Pessoa {
-
-
     private int codCliente;
     private Boolean sitCliente;
     private String docIdentificacao;
@@ -83,20 +81,44 @@ public class Cliente extends Pessoa {
     Scanner sc = new Scanner(System.in);
     public void cadastraCliente() {
 
-        System.out.println("Nome: ");
+        System.out.print("Nome: ");
         this.nome = sc.nextLine();
 
-        System.out.println("C.P.F: ");
+        System.out.print("C.P.F: ");
         this.cgcCpf = sc.nextLine();
 
-        System.out.println("Tipo do Documento: ");
+        if(this.cgcCpf.length() == TAMANHO_CPF){
+           this.tipoPessoa = TipoPessoaEnum.PESSOA_FISICA;
+        } else if (this.cgcCpf.length() == TAMANHO_CNPJ) {
+            this.tipoPessoa = TipoPessoaEnum.PESSOA_JURIDICA;
+        } else {
+            this.tipoPessoa = null;
+        }
+
+        this.sitCliente = true;
+
+        System.out.print("Tipo do Documento: ");
         this.tipoDocumento = sc.nextLine();
 
-
-        System.out.println("Nro. Documento: ");
+        System.out.print("Nro. Documento: ");
         this.docIdentificacao = sc.nextLine();
 
-        System.out.println("Nascimento: ");
+        System.out.print("Nascimento: ");
         this.dataNascimento = sc.nextLine();
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "codCliente=" + codCliente +
+                ", sitCliente=" + sitCliente +
+                ", docIdentificacao='" + docIdentificacao + '\'' +
+                ", tipoDocumento='" + tipoDocumento + '\'' +
+                ", dataNascimento='" + dataNascimento + '\'' +
+                ", enderecos=" + enderecos +
+                ", nome='" + nome + '\'' +
+                ", cgcCpf='" + cgcCpf + '\'' +
+                ", tipoPessoa=" + tipoPessoa.getValue().toString() +
+                '}';
     }
 }

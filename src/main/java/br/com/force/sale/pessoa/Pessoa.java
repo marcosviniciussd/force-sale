@@ -49,4 +49,13 @@ public class Pessoa {
     public void setTipoPessoa(TipoPessoaEnum tipoPessoa) {
         this.tipoPessoa = tipoPessoa;
     }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", cgcCpf='" + cgcCpf + '\'' +
+                ", tipoPessoa=" + tipoPessoa.getValue().toString() +
+                '}';
+    }
 }

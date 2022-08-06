@@ -101,25 +101,25 @@ public class Endereco {
             System.out.println("Opção Inválida.");
         }
 
-        System.out.println("C.E.P");
+        System.out.print("C.E.P: ");
         this.cep = sc.nextLine();
 
-        System.out.println("Endereço: ");
+        System.out.print("Endereço: ");
         this.endereco = sc.nextLine();
 
-        System.out.println("Numero: ");
+        System.out.print("Numero: ");
         this.numero = sc.nextLine();
 
-        System.out.println("Bairro: ");
+        System.out.print("Bairro: ");
         this.bairro = sc.nextLine();
 
-        System.out.println("Complemento: ");
+        System.out.print("Complemento: ");
         this.complemento = sc.nextLine();
 
-        System.out.println("Cidade: ");
+        System.out.print("Cidade: ");
         this.cidade = sc.nextLine();
 
-        System.out.println("Estado: ");
+        System.out.print("Estado: ");
         this.estado = sc.nextLine();
     }
 

@@ -16,6 +16,8 @@ public class Programa {
 
         System.out.println("Mostrando o Cliente");
         System.out.println(cli.getNome());
+        System.out.println(cli.getCgcCpf());
+        System.out.println(cli.getTipoPessoa());
         System.out.println(cli.getDataNascimento());
         System.out.println(cli.getEnderecos());
 
