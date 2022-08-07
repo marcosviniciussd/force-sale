@@ -1,8 +1,6 @@
 package br.com.force.sale.pessoa;
 
 public class Pessoa {
-    //public enum TipoPessoa{PESSOA_FISICA, PESSOA_JURIDICA}
-
     protected static final int TAMANHO_CPF = 11;
     protected static final int TAMANHO_CNPJ = 14;
     protected String nome;

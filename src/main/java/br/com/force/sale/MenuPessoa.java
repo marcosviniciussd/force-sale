@@ -1,5 +1,7 @@
 package br.com.force.sale;
 
+import br.com.force.sale.pessoa.Cliente;
+
 import java.util.Scanner;
 
 public class MenuPessoa {
@@ -26,6 +28,8 @@ public class MenuPessoa {
         switch (opcao) {
             case 1:
                 System.out.print("\nOpção Clientes\n\n");
+                Cliente cliente = new Cliente();
+                cliente.cadastraCliente();
                 break;
 
             case 2:
