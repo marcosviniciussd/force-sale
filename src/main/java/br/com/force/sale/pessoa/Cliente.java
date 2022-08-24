@@ -59,54 +59,6 @@ public class Cliente extends Pessoa {
         return enderecos;
     }
 
-    public void  adicionaEndereco(Endereco endereco){
-        if(endereco.getEndereco() == null){
-            throw new NullPointerException(getClass().toString() + " Erro-CLI001: Endereço não pode ser nulo. ");
-        }
-        if(endereco.getCep() == null){
-            throw new NullPointerException(getClass().toString() + " Erro-CLI002: C.E.P não pode ser nulo.");
-        }
-        if(endereco.getBairro() == null){
-            throw new NullPointerException(getClass().toString() + " Erro-CLI003: Bairro não pode ser nulo.");
-        }
-        if(endereco.getCidade() == null){
-            throw new NullPointerException(getClass().toString() + " Erro-CLI004: Cidade não pode ser nulo.");
-        }
-        if(endereco.getEstado() == null){
-            throw new NullPointerException(getClass().toString() + " Erro-CLI005: Estado (UF) não pode ser nulo.");
-        }
-        getEnderecos().add(endereco);
-    }
-
-    Scanner sc = new Scanner(System.in);
-    public void cadastraCliente() {
-
-        System.out.print("Nome: ");
-        this.nome = sc.nextLine();
-
-        System.out.print("C.P.F: ");
-        this.cgcCpf = sc.nextLine();
-
-        if(this.cgcCpf.length() == TAMANHO_CPF){
-           this.tipoPessoa = TipoPessoaEnum.PESSOA_FISICA;
-        } else if (this.cgcCpf.length() == TAMANHO_CNPJ) {
-            this.tipoPessoa = TipoPessoaEnum.PESSOA_JURIDICA;
-        } else {
-            this.tipoPessoa = null;
-        }
-
-        this.sitCliente = true;
-
-        System.out.print("Tipo do Documento: ");
-        this.tipoDocumento = sc.nextLine();
-
-        System.out.print("Nro. Documento: ");
-        this.docIdentificacao = sc.nextLine();
-
-        System.out.print("Nascimento: ");
-        this.dataNascimento = sc.nextLine();
-    }
-
     @Override
     public String toString() {
         return "Cliente{" +

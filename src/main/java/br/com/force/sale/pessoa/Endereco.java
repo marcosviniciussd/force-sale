@@ -76,53 +76,6 @@ public class Endereco {
         this.tipoEndereco = tipoEndereco;
     }
 
-    Scanner sc = new Scanner(System.in);
-    public void cadastraEndereco() {
-        int tipoEnd = 0;
-
-        System.out.println("SELECIONE O TIPO DE ENDEREÇO: ");
-        System.out.println("1 - RESIDENCIAL");
-        System.out.println("2 - COMERCIAL ");
-        System.out.println("3 - ENTREGA ");
-        System.out.println("4 - COBRANÇA");
-        System.out.println(" ");
-
-        tipoEnd = sc.nextInt();
-        if (tipoEnd == 1){
-            setTipoEndereco(TipoEnderecoEnum.ENDERECO_RESIDENCIAL);
-        } else if (tipoEnd == 2) {
-            setTipoEndereco(TipoEnderecoEnum.ENDERECO_COMERCIAL);
-        } else if (tipoEnd == 3) {
-            setTipoEndereco(TipoEnderecoEnum.ENDERECO_ENTREGA);
-        } else if (tipoEnd == 4) {
-            setTipoEndereco(TipoEnderecoEnum.ENDERECO_COBRANCA);
-        }
-        else{
-            System.out.println("Opção Inválida.");
-        }
-
-        System.out.print("C.E.P: ");
-        this.cep = sc.nextLine();
-
-        System.out.print("Endereço: ");
-        this.endereco = sc.nextLine();
-
-        System.out.print("Numero: ");
-        this.numero = sc.nextLine();
-
-        System.out.print("Bairro: ");
-        this.bairro = sc.nextLine();
-
-        System.out.print("Complemento: ");
-        this.complemento = sc.nextLine();
-
-        System.out.print("Cidade: ");
-        this.cidade = sc.nextLine();
-
-        System.out.print("Estado: ");
-        this.estado = sc.nextLine();
-    }
-
     @Override
     public String toString() {
         return "Endereco{" +
@@ -134,7 +87,6 @@ public class Endereco {
                 ", estado='" + estado + '\'' +
                 ", cep='" + cep + '\'' +
                 ", tipoEndereco=" + tipoEndereco.getValue().toString() +
-                ", sc=" + sc +
                 '}';
     }
 }

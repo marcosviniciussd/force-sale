@@ -7,11 +7,11 @@ public class Programa {
     public static void main(String[] args) {
 
         Cliente cli = new Cliente();
-        cli.cadastraCliente();
+        //cli.cadastraCliente();
 
         Endereco end = new Endereco();
-        end.cadastraEndereco();
-        cli.adicionaEndereco(end);
+        //end.cadastraEndereco();
+        //cli.adicionaEndereco(end);
 
 
         System.out.println("Mostrando o Cliente");

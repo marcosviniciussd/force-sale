@@ -40,7 +40,7 @@ public class Main {
                         break;
                     case 6:
                         System.out.print("\nAté logo!");
-                        menu.close();
+                        //menu.close();
                         break;
                     default:
                         System.out.print("\nOpção Inválida!");
