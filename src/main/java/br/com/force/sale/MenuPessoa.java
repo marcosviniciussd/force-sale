@@ -1,7 +1,7 @@
 package br.com.force.sale;
 
 import br.com.force.sale.pessoa.CadastraCliente;
-import br.com.force.sale.pessoa.Cliente;
+import br.com.force.sale.pessoa.CadastraEndereco;
 
 import java.util.Scanner;
 
@@ -30,10 +30,11 @@ public class MenuPessoa {
         switch (opcao) {
             case 1:
                 System.out.print("\nOpção Clientes\n\n");
-                //Cliente cliente = new Cliente();
-                //cliente.cadastraCliente();
                 CadastraCliente cliente = new CadastraCliente();
                 cliente.cadastrarCliente();
+
+                CadastraEndereco endereco = new CadastraEndereco();
+                endereco.cadastraEndereco();
                 break;
 
             case 2:
