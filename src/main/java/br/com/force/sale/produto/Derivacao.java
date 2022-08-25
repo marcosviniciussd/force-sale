@@ -6,7 +6,6 @@ public class Derivacao {
 
     private String codDerivacao;
     private String descricaoDerivacao;
-    private String codProduto;
     private String situacaoDerivacao;
     private BigDecimal pesoLiquido;
     private BigDecimal pesoBruto;
@@ -26,14 +25,6 @@ public class Derivacao {
 
     public void setDescricaoDerivacao(String descricaoDerivacao) {
         this.descricaoDerivacao = descricaoDerivacao;
-    }
-
-    public String getCodProduto() {
-        return codProduto;
-    }
-
-    public void setCodProduto(String codProduto) {
-        this.codProduto = codProduto;
     }
 
     public String getSituacaoDerivacao() {
