@@ -8,6 +8,11 @@ public class Origem {
     private Boolean controlaSerie;
     private Boolean controlaValidade;
     private String depositoPadrao;
+    private String situacaoOrigem;
+
+    public void setSituacaoOrigem(String situacaoOrigem) {
+        this.situacaoOrigem = situacaoOrigem;
+    }
 
     public String getCodOrigem() {
         return codOrigem;
@@ -63,5 +68,9 @@ public class Origem {
 
     public void setDepositoPadrao(String depositoPadrao) {
         this.depositoPadrao = depositoPadrao;
+    }
+
+    public String getSituacaoOrigem() {
+        return situacaoOrigem;
     }
 }

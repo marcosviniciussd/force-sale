@@ -7,6 +7,7 @@ public class Familia {
     private String unidadeMedida;
     private String derivacao;
     private String depositoPadrao;
+    private  String situacaoFamilia;
 
     public String getCodFamilia() {
         return codFamilia;
@@ -54,5 +55,13 @@ public class Familia {
 
     public void setDepositoPadrao(String depositoPadrao) {
         this.depositoPadrao = depositoPadrao;
+    }
+
+    public String getSituacaoFamilia() {
+        return situacaoFamilia;
+    }
+
+    public void setSituacaoFamilia(String situacaoFamilia) {
+        this.situacaoFamilia = situacaoFamilia;
     }
 }
