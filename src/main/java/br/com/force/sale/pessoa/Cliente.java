@@ -10,7 +10,7 @@ public class Cliente extends Pessoa {
     private String docIdentificacao;
     private String tipoDocumento;
     private String dataNascimento;
-    private List<Endereco> enderecos;
+    private List<Endereco> enderecos = new ArrayList<>();
 
     public int getCodCliente() {
         return codCliente;
@@ -53,9 +53,6 @@ public class Cliente extends Pessoa {
     }
 
     public List<Endereco> getEnderecos() {
-        if(enderecos == null){
-            enderecos = new ArrayList<Endereco>();
-        }
         return enderecos;
     }
 

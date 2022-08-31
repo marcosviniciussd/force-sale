@@ -2,6 +2,8 @@ package br.com.force.sale;
 
 import br.com.force.sale.pessoa.CadastraCliente;
 import br.com.force.sale.pessoa.CadastraEndereco;
+import br.com.force.sale.pessoa.Cliente;
+import br.com.force.sale.pessoa.Endereco;
 
 import java.util.Scanner;
 
@@ -30,11 +32,25 @@ public class MenuPessoa {
         switch (opcao) {
             case 1:
                 System.out.print("\nOpção Clientes\n\n");
-                CadastraCliente cliente = new CadastraCliente();
-                cliente.cadastrarCliente();
+                CadastraCliente cadastraCliente = new CadastraCliente();
+                Cliente cliente = cadastraCliente.cadastrarCliente();
 
-                CadastraEndereco endereco = new CadastraEndereco();
-                endereco.cadastraEndereco();
+                    //CadastraEndereco cadastraEndereco =  new CadastraEndereco();
+                    //cliente.getEnderecos().add(cadastraEndereco.cadastraEndereco());
+                    int opc;
+                    do {
+                        System.out.println("Deseja cadastrar um novo endereço para este cliente: ");
+                        System.out.print("1 -  Sim \n");
+                        System.out.print("2 -  Não \n");
+                        opc = menu.nextInt();
+                        if(opc == 1) {
+                            CadastraEndereco cadastraEndereco =  new CadastraEndereco();
+                            cliente.getEnderecos().add(cadastraEndereco.cadastraEndereco());
+                        }
+                    }
+                    while(opc != 2);
+
+                System.out.println(cliente);
                 break;
 
             case 2:

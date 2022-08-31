@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CadastraCliente {
 
-    public void cadastrarCliente(){
+    public Cliente cadastrarCliente(){
         Scanner sc = new Scanner(System.in);
 
         Cliente cli = new Cliente();
@@ -32,6 +32,8 @@ public class CadastraCliente {
 
         System.out.print("Nascimento: ");
         cli.setDataNascimento(sc.nextLine());
+
+        return cli;
     }
 
     public void  adicionaEndereco(Endereco endereco){
@@ -50,7 +52,6 @@ public class CadastraCliente {
         if(endereco.getEstado() == null){
             throw new NullPointerException(getClass().toString() + " Erro-CLI005: Estado (UF) não pode ser nulo.");
         }
-        //getEnderecos().add(endereco);
     }
 
 }

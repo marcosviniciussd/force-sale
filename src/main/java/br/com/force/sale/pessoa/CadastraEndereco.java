@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CadastraEndereco {
 
-    public void cadastraEndereco() {
+    public Endereco cadastraEndereco() {
         Scanner sc = new Scanner(System.in);
 
         Endereco end = new Endereco();
@@ -17,7 +17,7 @@ public class CadastraEndereco {
         System.out.println("4 - COBRANÇA");
         System.out.println(" ");
 
-        tipoEnd = sc.nextInt();
+        tipoEnd =Integer.parseInt(sc.nextLine());
         if (tipoEnd == 1){
             end.setTipoEndereco(TipoEnderecoEnum.ENDERECO_RESIDENCIAL);
         } else if (tipoEnd == 2) {
@@ -51,5 +51,7 @@ public class CadastraEndereco {
 
         System.out.print("Estado: ");
         end.setEstado(sc.nextLine());
+
+        return end;
     }
 }
