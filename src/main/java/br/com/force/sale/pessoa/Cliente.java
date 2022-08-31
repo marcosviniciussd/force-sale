@@ -56,6 +56,10 @@ public class Cliente extends Pessoa {
         return enderecos;
     }
 
+    public void addEndereco(){
+
+    }
+
     @Override
     public String toString() {
         return "Cliente{" +
@@ -67,7 +71,7 @@ public class Cliente extends Pessoa {
                 ", enderecos=" + enderecos +
                 ", nome='" + nome + '\'' +
                 ", cgcCpf='" + cgcCpf + '\'' +
-                ", tipoPessoa=" + tipoPessoa.getValue().toString() +
+                ", tipoPessoa=" + tipoPessoa +
                 '}';
     }
 }

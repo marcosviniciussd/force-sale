@@ -33,24 +33,35 @@ public class CadastraEndereco {
 
         System.out.print("C.E.P: ");
         end.setCep(sc.nextLine());
+        System.out.println(end.getCep());
+        if(end.getCep() == null || end.getCep() == "")
+            throw new NullPointerException(getClass().toString() + " Erro-CLI002: C.E.P não pode ser nulo.");
 
         System.out.print("Endereço: ");
         end.setEndereco(sc.nextLine());
+        if(end.getEndereco() == null || end.getEndereco() == "")
+            throw new NullPointerException(getClass().toString() + " Erro-END001: Endereço não pode ser nulo. ");
 
         System.out.print("Numero: ");
         end.setNumero(sc.nextLine());
 
         System.out.print("Bairro: ");
         end.setBairro(sc.nextLine());
+        if(end.getBairro() == null || end.getBairro() == "")
+            throw new NullPointerException(getClass().toString() + " Erro-CLI003: Bairro não pode ser nulo.");
 
         System.out.print("Complemento: ");
         end.setComplemento(sc.nextLine());
 
         System.out.print("Cidade: ");
         end.setCidade(sc.nextLine());
+        if(end.getCidade() == null || end.getCidade() == "")
+            throw new NullPointerException(getClass().toString() + " Erro-CLI004: Cidade não pode ser nulo.");
 
         System.out.print("Estado: ");
         end.setEstado(sc.nextLine());
+        if(end.getEstado() == null || end.getEstado() == "")
+            throw new NullPointerException(getClass().toString() + " Erro-CLI005: Estado (UF) não pode ser nulo.");
 
         return end;
     }

@@ -3,7 +3,6 @@ package br.com.force.sale;
 import br.com.force.sale.pessoa.CadastraCliente;
 import br.com.force.sale.pessoa.CadastraEndereco;
 import br.com.force.sale.pessoa.Cliente;
-import br.com.force.sale.pessoa.Endereco;
 
 import java.util.Scanner;
 
@@ -35,8 +34,6 @@ public class MenuPessoa {
                 CadastraCliente cadastraCliente = new CadastraCliente();
                 Cliente cliente = cadastraCliente.cadastrarCliente();
 
-                    //CadastraEndereco cadastraEndereco =  new CadastraEndereco();
-                    //cliente.getEnderecos().add(cadastraEndereco.cadastraEndereco());
                     int opc;
                     do {
                         System.out.println("Deseja cadastrar um novo endereço para este cliente: ");
@@ -44,8 +41,13 @@ public class MenuPessoa {
                         System.out.print("2 -  Não \n");
                         opc = menu.nextInt();
                         if(opc == 1) {
-                            CadastraEndereco cadastraEndereco =  new CadastraEndereco();
-                            cliente.getEnderecos().add(cadastraEndereco.cadastraEndereco());
+                            try {
+                                CadastraEndereco cadastraEndereco = new CadastraEndereco();
+                                cliente.getEnderecos().add(cadastraEndereco.cadastraEndereco());
+                            } catch (Exception e){
+                                System.out.println(e.getMessage());
+                                System.out.println("Não foi possivel cadastrar um novo endereço.");
+                            }
                         }
                     }
                     while(opc != 2);

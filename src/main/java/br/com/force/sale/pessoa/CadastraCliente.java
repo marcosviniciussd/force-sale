@@ -35,23 +35,4 @@ public class CadastraCliente {
 
         return cli;
     }
-
-    public void  adicionaEndereco(Endereco endereco){
-        if(endereco.getEndereco() == null){
-            throw new NullPointerException(getClass().toString() + " Erro-CLI001: Endereço não pode ser nulo. ");
-        }
-        if(endereco.getCep() == null){
-            throw new NullPointerException(getClass().toString() + " Erro-CLI002: C.E.P não pode ser nulo.");
-        }
-        if(endereco.getBairro() == null){
-            throw new NullPointerException(getClass().toString() + " Erro-CLI003: Bairro não pode ser nulo.");
-        }
-        if(endereco.getCidade() == null){
-            throw new NullPointerException(getClass().toString() + " Erro-CLI004: Cidade não pode ser nulo.");
-        }
-        if(endereco.getEstado() == null){
-            throw new NullPointerException(getClass().toString() + " Erro-CLI005: Estado (UF) não pode ser nulo.");
-        }
-    }
-
 }
